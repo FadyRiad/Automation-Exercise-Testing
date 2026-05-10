@@ -1,19 +1,19 @@
 
 USE sakila;
 
--- [TC-1] Data Integrity: Prevent rental creation for non-existent Customer
+-- Prevent rental creation for non-existent Customer
 
 INSERT INTO rental (rental_date, inventory_id, customer_id, staff_id) 
 VALUES (NOW(), 1, 99999, 1);
 
 
--- [TC-2] Data Integrity: Prevent rental creation for non-existent Staff
+-- Prevent rental creation for non-existent Staff
 
 INSERT INTO rental (rental_date, inventory_id, customer_id, staff_id) 
 VALUES (NOW(), 1, 1, 500);
 
 
--- [TC-3] Database Automation: Verify auto-generation of rental_date
+-- Verify auto-generation of rental_date
 
 INSERT INTO rental (inventory_id, customer_id, staff_id) 
 VALUES (1, 1, 1);
@@ -21,21 +21,21 @@ VALUES (1, 1, 1);
 
 
 
--- [TC-4] Business Logic: Ensure return_date is not earlier than rental_date
+-- Ensure return_date is not earlier than rental_date
 
 SELECT rental_id, rental_date, return_date 
 FROM rental 
 WHERE return_date < rental_date;
 
 
--- [TC-5] Data Accuracy: Count active rentals (Items not yet returned)
+-- Count active rentals (Items not yet returned)
 
 SELECT COUNT(*) AS active_rentals_count 
 FROM rental 
 WHERE return_date IS NULL;
 
 
--- [TC-6] Relational Consistency: Check for Orphan Rental records
+-- Check for Orphan Rental records
 
 SELECT r.rental_id, r.inventory_id
 FROM rental r
@@ -43,7 +43,7 @@ LEFT JOIN inventory i ON r.inventory_id = i.inventory_id
 WHERE i.inventory_id IS NULL;
 
 
--- [TC-7] Relational Consistency: Check for Inventory items without Film details
+-- Check for Inventory items without Film details
 
 SELECT i.inventory_id, i.film_id
 FROM inventory i
