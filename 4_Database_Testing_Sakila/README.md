@@ -10,8 +10,8 @@ Full test cases, queries, and results can be found here:
 ---
 
 ###  Folder Contents
-- ** Scripts**: SQL files containing the test queries.
-- ** Screenshots**: Execution evidence and output results.
+- **Scripts**: SQL files containing the test queries.
+- **Screenshots**: Execution evidence and output results.
 
 ###  Test Scenarios
 - **Data Integrity**: Blocking invalid Customer/Staff IDs (FK Constraints).
