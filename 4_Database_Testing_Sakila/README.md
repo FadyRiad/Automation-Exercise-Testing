@@ -19,5 +19,3 @@ Full test cases, queries, and results can be found here:
 - **Business Logic**: Ensuring `return_date` is not before `rental_date`.
 - **Relational Consistency**: Checking for orphan records in rentals and inventory.
 
----
-*Developed by Fady Riad*
