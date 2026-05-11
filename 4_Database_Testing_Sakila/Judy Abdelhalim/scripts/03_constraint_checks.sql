@@ -1,10 +1,6 @@
 -- ============================================
 -- Sakila DB Testing - 03: Constraint Checks
 -- ============================================
--- NOTE: These queries are DESIGNED TO FAIL.
--- The ERROR message is the PASSING result.
--- Take a screenshot of each error.
-
 USE sakila;
 
 -- TC14: Try to delete an actor who has films -> should FAIL with ERROR 1451
