@@ -1,7 +1,3 @@
--- ============================================
--- Sakila DB Testing - 01: Count Validation
--- ============================================
-
 USE sakila;
 
 -- TC01: Count all main tables
