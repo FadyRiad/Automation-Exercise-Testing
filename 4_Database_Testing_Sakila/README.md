@@ -13,9 +13,4 @@ Full test cases, queries, and results can be found here:
 - **Scripts**: SQL files containing the test queries.
 - **Screenshots**: Execution evidence and output results.
 
-###  Test Scenarios
-- **Data Integrity**: Blocking invalid Customer/Staff IDs (FK Constraints).
-- **Automation**: Verifying automatic `rental_date` generation.
-- **Business Logic**: Ensuring `return_date` is not before `rental_date`.
-- **Relational Consistency**: Checking for orphan records in rentals and inventory.
 
