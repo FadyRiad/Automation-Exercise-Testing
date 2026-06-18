@@ -1,0 +1,416 @@
+{
+  "info": {
+    "_postman_id": "19791ff1-dd7e-4abd-9bad-1921e4d9e824",
+    "name": "AutomationExercise_Team_Tasks",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "56018913",
+    "_collection_link": "https://go.postman.co/collection/56018913-19791ff1-dd7e-4abd-9bad-1921e4d9e824?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "API 11 - Create User Negative",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "\r",
+              "var jsonData = pm.response.json();\r",
+              "\r",
+              "pm.test(\"Response code is 201\", function () {\r",
+              "    pm.expect(jsonData.responseCode).to.eql(201);\r",
+              "});\r",
+              "\r",
+              "pm.test(\"User created successfully\", function () {\r",
+              "    pm.expect(jsonData.message).to.eql(\"User created!\");\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "name",
+              "value": "Nouran",
+              "type": "text",
+              "uuid": "a373cefd-00ed-44f6-98ef-6e2c0c594da7"
+            },
+            {
+              "key": "email",
+              "value": "nouran_test_123@gmail.com",
+              "type": "text",
+              "uuid": "cfc82978-c77e-4a2a-9cd5-54bf1fdca934"
+            },
+            {
+              "key": "password",
+              "value": "123456",
+              "type": "text",
+              "uuid": "2e100dcb-6247-491c-abed-7bfcd5483f3e"
+            },
+            {
+              "key": "title",
+              "value": "Miss",
+              "type": "text",
+              "uuid": "a653f216-0534-4bac-add2-7ef224693006"
+            },
+            {
+              "key": "birth_date",
+              "value": "10",
+              "type": "text",
+              "uuid": "67c9bb5c-6335-4b9f-a417-2046b8ca3758"
+            },
+            {
+              "key": "birth_month",
+              "value": "May",
+              "type": "text",
+              "uuid": "c0d170d5-fa54-4b0a-a8e3-2ac1d90cc5c6"
+            },
+            {
+              "key": "birth_year",
+              "value": "2004",
+              "type": "text",
+              "uuid": "3471651e-202d-45bc-bdd6-641fb40c58c7"
+            },
+            {
+              "key": "firstname",
+              "value": "Nouran",
+              "type": "text",
+              "uuid": "8b64ff6d-5788-4b7e-bb40-68927602111e"
+            },
+            {
+              "key": "lastname",
+              "value": "Hossam",
+              "type": "text",
+              "uuid": "e1cb1f1c-d915-4f5c-8219-75cd504adae4"
+            },
+            {
+              "key": "company",
+              "value": "DEPI",
+              "type": "text",
+              "uuid": "dc1e025d-42cc-40e5-9d8f-27fa343c0f8a"
+            },
+            {
+              "key": "address1",
+              "value": "Alexandria",
+              "type": "text",
+              "uuid": "0dec54cd-58d8-4a97-9339-ffd1e623831f"
+            },
+            {
+              "key": "address2",
+              "value": "Egypt",
+              "type": "text",
+              "uuid": "41ae87fd-079e-44f8-a45c-c55f582924e4"
+            },
+            {
+              "key": "country",
+              "value": "Egypt",
+              "type": "text",
+              "uuid": "e4706e03-9776-416e-909f-630a2e40ed5a"
+            },
+            {
+              "key": "zipcode",
+              "value": "12345",
+              "type": "text",
+              "uuid": "dadf6a58-ec58-4865-9d07-5008778df491"
+            },
+            {
+              "key": "state",
+              "value": "Alexandria",
+              "type": "text",
+              "uuid": "e26d9e6d-4e65-4ff8-9dd0-0e6d2bd43372"
+            },
+            {
+              "key": "city",
+              "value": "Alexandria",
+              "type": "text",
+              "uuid": "82cee285-e4de-4d06-a370-a53e8c085a61"
+            },
+            {
+              "key": "mobile_number",
+              "value": "01012345678",
+              "type": "text",
+              "uuid": "fa584465-764b-4d1a-95e1-ca2ef3d1edae"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{Base_URL}}/createAccount",
+          "host": [
+            "{{Base_URL}}"
+          ],
+          "path": [
+            "createAccount"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "API 11 - Create User Positive",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "\r",
+              "var jsonData = pm.response.json();\r",
+              "\r",
+              "pm.test(\"Response code is 201\", function () {\r",
+              "    pm.expect(jsonData.responseCode).to.eql(201);\r",
+              "});\r",
+              "\r",
+              "pm.test(\"User created successfully\", function () {\r",
+              "    pm.expect(jsonData.message).to.eql(\"User created!\");\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        },
+        {
+          "listen": "prerequest",
+          "script": {
+            "exec": [
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "name",
+              "value": "Nouran",
+              "type": "text",
+              "uuid": "a373cefd-00ed-44f6-98ef-6e2c0c594da7"
+            },
+            {
+              "key": "email",
+              "value": "nouran18062026@gmail.com",
+              "type": "text",
+              "uuid": "cfc82978-c77e-4a2a-9cd5-54bf1fdca934"
+            },
+            {
+              "key": "password",
+              "value": "123456",
+              "type": "text",
+              "uuid": "2e100dcb-6247-491c-abed-7bfcd5483f3e"
+            },
+            {
+              "key": "title",
+              "value": "Miss",
+              "type": "text",
+              "uuid": "a653f216-0534-4bac-add2-7ef224693006"
+            },
+            {
+              "key": "birth_date",
+              "value": "10",
+              "type": "text",
+              "uuid": "67c9bb5c-6335-4b9f-a417-2046b8ca3758"
+            },
+            {
+              "key": "birth_month",
+              "value": "May",
+              "type": "text",
+              "uuid": "c0d170d5-fa54-4b0a-a8e3-2ac1d90cc5c6"
+            },
+            {
+              "key": "birth_year",
+              "value": "2004",
+              "type": "text",
+              "uuid": "3471651e-202d-45bc-bdd6-641fb40c58c7"
+            },
+            {
+              "key": "firstname",
+              "value": "Nouran",
+              "type": "text",
+              "uuid": "8b64ff6d-5788-4b7e-bb40-68927602111e"
+            },
+            {
+              "key": "lastname",
+              "value": "Hossam",
+              "type": "text",
+              "uuid": "e1cb1f1c-d915-4f5c-8219-75cd504adae4"
+            },
+            {
+              "key": "company",
+              "value": "DEPI",
+              "type": "text",
+              "uuid": "dc1e025d-42cc-40e5-9d8f-27fa343c0f8a"
+            },
+            {
+              "key": "address1",
+              "value": "Alexandria",
+              "type": "text",
+              "uuid": "0dec54cd-58d8-4a97-9339-ffd1e623831f"
+            },
+            {
+              "key": "address2",
+              "value": "Egypt",
+              "type": "text",
+              "uuid": "41ae87fd-079e-44f8-a45c-c55f582924e4"
+            },
+            {
+              "key": "country",
+              "value": "Egypt",
+              "type": "text",
+              "uuid": "e4706e03-9776-416e-909f-630a2e40ed5a"
+            },
+            {
+              "key": "zipcode",
+              "value": "12345",
+              "type": "text",
+              "uuid": "dadf6a58-ec58-4865-9d07-5008778df491"
+            },
+            {
+              "key": "state",
+              "value": "Alexandria",
+              "type": "text",
+              "uuid": "e26d9e6d-4e65-4ff8-9dd0-0e6d2bd43372"
+            },
+            {
+              "key": "city",
+              "value": "Alexandria",
+              "type": "text",
+              "uuid": "82cee285-e4de-4d06-a370-a53e8c085a61"
+            },
+            {
+              "key": "mobile_number",
+              "value": "01012345678",
+              "type": "text",
+              "uuid": "fa584465-764b-4d1a-95e1-ca2ef3d1edae"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{Base_URL}}/createAccount",
+          "host": [
+            "{{Base_URL}}"
+          ],
+          "path": [
+            "createAccount"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "API 14 - Get User By Email Positive",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "\r",
+              "let jsonData = pm.response.json();\r",
+              "\r",
+              "pm.test(\"Response code is 200\", function () {\r",
+              "    pm.expect(jsonData.responseCode).to.eql(200);\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Correct email returned\", function () {\r",
+              "    pm.expect(jsonData.user.email).to.eql(\"nouran18062026@gmail.com\");\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{Base_URL}}/getUserDetailByEmail?email=nouran18062026@gmail.com",
+          "host": [
+            "{{Base_URL}}"
+          ],
+          "path": [
+            "getUserDetailByEmail"
+          ],
+          "query": [
+            {
+              "key": "email",
+              "value": "nouran18062026@gmail.com"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "API 14 - Get User By Email Negative",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "\r",
+              "let jsonData = pm.response.json();\r",
+              "\r",
+              "pm.test(\"Response code is 404\", function () {\r",
+              "    pm.expect(jsonData.responseCode).to.eql(404);\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Account not found message\", function () {\r",
+              "    pm.expect(jsonData.message).to.include(\"Account not found\");\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{Base_URL}}/getUserDetailByEmail?email=notfound123@gmail.com",
+          "host": [
+            "{{Base_URL}}"
+          ],
+          "path": [
+            "getUserDetailByEmail"
+          ],
+          "query": [
+            {
+              "key": "email",
+              "value": "notfound123@gmail.com"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
