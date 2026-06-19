@@ -7,8 +7,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import java.time.Duration;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class BaseTest {
     protected WebDriver driver;
@@ -23,12 +21,14 @@ public class BaseTest {
 
         driver = new ChromeDriver(options);
 
+        // Standard timeouts for the whole framework
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(60));
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(0));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10)); // Changed back to 10s for general elements
 
+        // Navigate to the main home page (Important for all team members)
+        driver.get("https://automationexercise.com/");
 
-        driver.get("https://automationexercise.com/products");
-
+        // Explicit wait instance for dynamic elements (Ahmed's addition)
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
