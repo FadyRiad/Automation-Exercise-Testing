@@ -16,12 +16,36 @@ public class ProductsPage {
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
+    // Existing Locators
     private By firstProductAddToCart =
             By.xpath("(//a[contains(text(),'Add to cart')])[1]");
 
     private By viewCartButton =
             By.xpath("//u[contains(text(),'View Cart')]");
 
+    // New Locators
+    private By productsButton =
+            By.xpath("//a[@href='/products']");
+
+    private By allProductsTitle =
+            By.xpath("//h2[contains(text(),'All Products')]");
+
+    private By firstViewProduct =
+            By.xpath("(//a[contains(text(),'View Product')])[1]");
+
+    private By productDetails =
+            By.xpath("//div[@class='product-information']");
+
+    private By searchInput =
+            By.id("search_product");
+
+    private By searchButton =
+            By.id("submit_search");
+
+    private By searchedProductsTitle =
+            By.xpath("//h2[contains(text(),'Searched Products')]");
+
+    // Existing Methods
     public void addFirstProduct() {
 
         WebElement btn = wait.until(
@@ -42,5 +66,40 @@ public class ProductsPage {
 
         ((JavascriptExecutor) driver)
                 .executeScript("arguments[0].click();", viewCart);
+    }
+
+    // New Methods
+    public void openProductsPage() {
+        driver.findElement(productsButton).click();
+    }
+
+    public boolean isAllProductsVisible() {
+        return driver.findElement(allProductsTitle).isDisplayed();
+    }
+
+    public void openFirstProductDetails() {
+
+        WebElement product = wait.until(
+                ExpectedConditions.elementToBeClickable(firstViewProduct)
+        );
+
+        ((JavascriptExecutor) driver)
+                .executeScript("arguments[0].scrollIntoView(true);", product);
+
+        ((JavascriptExecutor) driver)
+                .executeScript("arguments[0].click();", product);
+    }
+
+    public boolean isProductDetailsVisible() {
+        return driver.findElement(productDetails).isDisplayed();
+    }
+
+    public void searchProduct(String productName) {
+        driver.findElement(searchInput).sendKeys(productName);
+        driver.findElement(searchButton).click();
+    }
+
+    public boolean isSearchResultVisible() {
+        return driver.findElement(searchedProductsTitle).isDisplayed();
     }
 }
