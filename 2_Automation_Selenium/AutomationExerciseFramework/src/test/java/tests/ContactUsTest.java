@@ -1,22 +1,30 @@
 package tests;
 
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import pages.ContactUsPage;
 
 public class ContactUsTest extends BaseTest {
 
-    @Test
-    public void testContactUsForm() {
+    private static final String SUCCESS_MESSAGE = "Success! Your details have been submitted successfully.";
+
+    @DataProvider(name = "contactFormData")
+    public Object[][] getContactFormData() {
+        return new Object[][]{
+                {"Fady Riad", "fady.riad@outlook.com", "Bulk Order Inquiry", "Hello, I would like to inquire about corporate pricing and delivery timelines. Thanks."}
+        };
+    }
+
+    @Test(priority = 1, groups = {"smoke", "regression"}, dataProvider = "contactFormData")
+    public void testSuccessfulContactFormSubmission(String name, String email, String subject, String message) {
         ContactUsPage contactPage = new ContactUsPage(driver);
 
-        // Execute test steps
-        contactPage.clickContactUs();
-        contactPage.fillContactForm("Fady Riad", "fady@example.com", "Testing POM", "This is an automated text from Selenium Java.");
-        contactPage.clickSubmit();
+        contactPage.clickContactUs()
+                .fillContactForm(name, email, subject, message)
+                .clickSubmit();
 
-        // Verify the success message
         String actualMessage = contactPage.getSuccessMessageText();
-        Assert.assertEquals(actualMessage, "Success! Your details have been submitted successfully.");
+        Assert.assertEquals(actualMessage, SUCCESS_MESSAGE, "Contact us form submission failed!");
     }
 }

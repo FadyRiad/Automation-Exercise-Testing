@@ -8,6 +8,9 @@ public class LoginTest extends BaseTest {
 
     LoginPage loginPage;
 
+    // Use a unique email for registration to prevent "Email already exists" errors
+    String signupEmail = "judysignup" + System.currentTimeMillis() + "@gmail.com";
+
     static String testEmail = "judyzaghloul21@gmail.com";
     static String testName = "Judy";
     static String testPassword = "GKryP@LbbWV6eFP";
@@ -16,7 +19,7 @@ public class LoginTest extends BaseTest {
     public void testRegisterUser() {
         loginPage = new LoginPage(driver);
         loginPage.clickRegisterLogin();
-        loginPage.register(testName, testEmail);
+        loginPage.register(testName, signupEmail); // Changed to signupEmail
         Assert.assertTrue(driver.getCurrentUrl().contains("signup"),
                 "Registration page did not load as expected");
     }
