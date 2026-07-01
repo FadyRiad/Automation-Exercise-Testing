@@ -28,4 +28,5 @@ public class ProductsTest extends BaseTest {
         productsPage.searchProduct(targetProduct);
         Assert.assertTrue(productsPage.isSearchResultVisible(), "Search results are not displayed");
     }
+
 }

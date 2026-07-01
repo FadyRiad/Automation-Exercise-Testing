@@ -1,8 +1,58 @@
-2026-07-01 03:23:19 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\Fady\AppData\Local\JetBrains\IntelliJIdea2026.1\temp-testng-customsuite.xml
+2026-07-01 20:49:08 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  D:\DEPI\Final Project\selenium\2_Automation_Selenium\AutomationExerciseFramework\testng.xml
 
-2026-07-01 03:23:19 [main] INFO  base.BaseTest - Starting Test Execution Configuration...
-2026-07-01 03:23:19 [main] INFO  base.BaseTest - Configuration properties loaded successfully.
-2026-07-01 03:23:19 [main] INFO  base.BaseTest - Initializing browser: chrome
-2026-07-01 03:23:20 [main] INFO  base.BaseTest - Navigating to application URL: https://automationexercise.com
-2026-07-01 03:23:26 [main] INFO  base.BaseTest - Terminating browser session and closing driver.
+2026-07-01 20:49:08 [main] INFO  base.BaseTest - Starting Test Execution Configuration...
+2026-07-01 20:49:08 [main] INFO  base.BaseTest - Configuration properties loaded successfully.
+2026-07-01 20:49:08 [main] INFO  base.BaseTest - Initializing browser: chrome
+2026-07-01 20:49:12 [main] INFO  base.BaseTest - Navigating to application URL: https://automationexercise.com
+2026-07-01 20:49:29 [main] INFO  base.BaseTest - Terminating browser session and closing driver.
+2026-07-01 20:49:30 [main] INFO  base.BaseTest - Starting Test Execution Configuration...
+2026-07-01 20:49:30 [main] INFO  base.BaseTest - Configuration properties loaded successfully.
+2026-07-01 20:49:30 [main] INFO  base.BaseTest - Initializing browser: chrome
+2026-07-01 20:49:31 [main] INFO  base.BaseTest - Navigating to application URL: https://automationexercise.com
+2026-07-01 20:49:50 [main] INFO  base.BaseTest - Terminating browser session and closing driver.
+2026-07-01 20:49:50 [main] INFO  base.BaseTest - Starting Test Execution Configuration...
+2026-07-01 20:49:50 [main] INFO  base.BaseTest - Configuration properties loaded successfully.
+2026-07-01 20:49:50 [main] INFO  base.BaseTest - Initializing browser: chrome
+2026-07-01 20:49:51 [main] INFO  base.BaseTest - Navigating to application URL: https://automationexercise.com
+2026-07-01 20:50:05 [main] INFO  base.BaseTest - Terminating browser session and closing driver.
+2026-07-01 20:50:05 [main] INFO  base.BaseTest - Starting Test Execution Configuration...
+2026-07-01 20:50:05 [main] INFO  base.BaseTest - Configuration properties loaded successfully.
+2026-07-01 20:50:05 [main] INFO  base.BaseTest - Initializing browser: chrome
+2026-07-01 20:50:06 [main] INFO  base.BaseTest - Navigating to application URL: https://automationexercise.com
+2026-07-01 20:50:19 [main] INFO  base.BaseTest - Terminating browser session and closing driver.
+2026-07-01 20:50:19 [main] INFO  base.BaseTest - Starting Test Execution Configuration...
+2026-07-01 20:50:19 [main] INFO  base.BaseTest - Configuration properties loaded successfully.
+2026-07-01 20:50:19 [main] INFO  base.BaseTest - Initializing browser: chrome
+2026-07-01 20:50:20 [main] INFO  base.BaseTest - Navigating to application URL: https://automationexercise.com
+2026-07-01 20:50:37 [main] INFO  base.BaseTest - Terminating browser session and closing driver.
+2026-07-01 20:50:37 [main] INFO  base.BaseTest - Starting Test Execution Configuration...
+2026-07-01 20:50:37 [main] INFO  base.BaseTest - Configuration properties loaded successfully.
+2026-07-01 20:50:37 [main] INFO  base.BaseTest - Initializing browser: chrome
+2026-07-01 20:50:38 [main] INFO  base.BaseTest - Navigating to application URL: https://automationexercise.com
+2026-07-01 20:50:47 [main] INFO  base.BaseTest - Terminating browser session and closing driver.
+2026-07-01 20:50:47 [main] INFO  base.BaseTest - Starting Test Execution Configuration...
+2026-07-01 20:50:47 [main] INFO  base.BaseTest - Configuration properties loaded successfully.
+2026-07-01 20:50:47 [main] INFO  base.BaseTest - Initializing browser: chrome
+2026-07-01 20:50:48 [main] INFO  base.BaseTest - Navigating to application URL: https://automationexercise.com
+2026-07-01 20:51:02 [main] INFO  base.BaseTest - Terminating browser session and closing driver.
+2026-07-01 20:51:02 [main] INFO  base.BaseTest - Starting Test Execution Configuration...
+2026-07-01 20:51:02 [main] INFO  base.BaseTest - Configuration properties loaded successfully.
+2026-07-01 20:51:02 [main] INFO  base.BaseTest - Initializing browser: chrome
+2026-07-01 20:51:03 [main] INFO  base.BaseTest - Navigating to application URL: https://automationexercise.com
+2026-07-01 20:51:21 [main] INFO  base.BaseTest - Terminating browser session and closing driver.
+2026-07-01 20:51:21 [main] INFO  base.BaseTest - Starting Test Execution Configuration...
+2026-07-01 20:51:21 [main] INFO  base.BaseTest - Configuration properties loaded successfully.
+2026-07-01 20:51:21 [main] INFO  base.BaseTest - Initializing browser: chrome
+2026-07-01 20:51:22 [main] INFO  base.BaseTest - Navigating to application URL: https://automationexercise.com
+2026-07-01 20:52:23 [main] INFO  base.BaseTest - Terminating browser session and closing driver.
+2026-07-01 20:52:23 [main] INFO  base.BaseTest - Starting Test Execution Configuration...
+2026-07-01 20:52:23 [main] INFO  base.BaseTest - Configuration properties loaded successfully.
+2026-07-01 20:52:23 [main] INFO  base.BaseTest - Initializing browser: chrome
+2026-07-01 20:52:26 [main] INFO  base.BaseTest - Navigating to application URL: https://automationexercise.com
+2026-07-01 20:53:05 [main] INFO  base.BaseTest - Terminating browser session and closing driver.
+2026-07-01 20:53:06 [main] INFO  base.BaseTest - Starting Test Execution Configuration...
+2026-07-01 20:53:06 [main] INFO  base.BaseTest - Configuration properties loaded successfully.
+2026-07-01 20:53:06 [main] INFO  base.BaseTest - Initializing browser: chrome
+2026-07-01 20:53:08 [main] INFO  base.BaseTest - Navigating to application URL: https://automationexercise.com
+2026-07-01 20:53:17 [main] INFO  base.BaseTest - Terminating browser session and closing driver.
