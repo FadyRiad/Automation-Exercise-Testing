@@ -1,18 +1,21 @@
 package tests;
 
+import base.BaseTest;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import pages.SubscriptionPage;
+import utils.JsonDataReader;
+import utils.TestListener;
 
+@Listeners(TestListener.class)
 public class SubscriptionTest extends BaseTest {
-
-    private static final String EXPECTED_SUBSCRIBE_MSG = "You have been successfully subscribed!";
 
     @DataProvider(name = "subscriptionData")
     public Object[][] getSubscriptionData() {
         return new Object[][] {
-                { "fady.riad@outlook.com" }
+                { JsonDataReader.getTestData("subscriptionEmail") }
         };
     }
 
@@ -25,6 +28,7 @@ public class SubscriptionTest extends BaseTest {
                 .clickSubscribe()
                 .getSuccessAlertText();
 
-        Assert.assertEquals(actualAlert, EXPECTED_SUBSCRIBE_MSG, "Newsletter subscription failed!");
+        String expectedSubscribeMsg = JsonDataReader.getTestData("expectedSubscribeMsg");
+        Assert.assertEquals(actualAlert, expectedSubscribeMsg, "Newsletter subscription failed!");
     }
 }

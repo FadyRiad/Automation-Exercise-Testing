@@ -1,10 +1,15 @@
 package tests;
 
+import base.BaseTest;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import pages.CartPage;
 import pages.ProductsPage;
+import utils.JsonDataReader;
+import utils.TestListener;
 
+@Listeners(TestListener.class)
 public class CartTest extends BaseTest {
 
     @Test
@@ -29,6 +34,8 @@ public class CartTest extends BaseTest {
         productsPage.clickViewCart();
 
         String actualQuantity = cartPage.getProductQuantity();
-        Assert.assertEquals(actualQuantity, "1", "Product quantity in cart is incorrect!");
+        String expectedQuantity = JsonDataReader.getTestData("expectedQuantity");
+
+        Assert.assertEquals(actualQuantity, expectedQuantity, "Product quantity in cart is incorrect!");
     }
 }

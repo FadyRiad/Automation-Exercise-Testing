@@ -1,25 +1,27 @@
 package tests;
 
+import base.BaseTest;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import pages.LoginPage;
+import utils.JsonDataReader;
+import utils.TestListener;
 
+@Listeners(TestListener.class)
 public class LoginTest extends BaseTest {
 
     LoginPage loginPage;
-
-    // Use a unique email for registration to prevent "Email already exists" errors
     String signupEmail = "judysignup" + System.currentTimeMillis() + "@gmail.com";
-
-    static String testEmail = "judyzaghloul21@gmail.com";
-    static String testName = "Judy";
-    static String testPassword = "GKryP@LbbWV6eFP";
 
     @Test(priority = 1)
     public void testRegisterUser() {
         loginPage = new LoginPage(driver);
         loginPage.clickRegisterLogin();
-        loginPage.register(testName, signupEmail); // Changed to signupEmail
+
+        String testName = JsonDataReader.getTestData("testName");
+        loginPage.register(testName, signupEmail);
+
         Assert.assertTrue(driver.getCurrentUrl().contains("signup"),
                 "Registration page did not load as expected");
     }
@@ -28,7 +30,11 @@ public class LoginTest extends BaseTest {
     public void testLoginIncorrect() {
         loginPage = new LoginPage(driver);
         loginPage.clickRegisterLogin();
-        loginPage.login("wrongemail@example.com", "WrongPassword");
+
+        String wrongEmail = JsonDataReader.getTestData("wrongEmail");
+        String wrongPassword = JsonDataReader.getTestData("wrongPassword");
+        loginPage.login(wrongEmail, wrongPassword);
+
         Assert.assertTrue(loginPage.isLoginErrorDisplayed(),
                 "Error message should be displayed for incorrect login");
     }
@@ -37,7 +43,11 @@ public class LoginTest extends BaseTest {
     public void testLoginCorrect() {
         loginPage = new LoginPage(driver);
         loginPage.clickRegisterLogin();
+
+        String testEmail = JsonDataReader.getTestData("testEmail");
+        String testPassword = JsonDataReader.getTestData("testPassword");
         loginPage.login(testEmail, testPassword);
+
         Assert.assertTrue(loginPage.isLoggedIn(),
                 "User should be logged in with correct credentials");
     }
@@ -46,9 +56,14 @@ public class LoginTest extends BaseTest {
     public void testLogoutUser() {
         loginPage = new LoginPage(driver);
         loginPage.clickRegisterLogin();
+
+        String testEmail = JsonDataReader.getTestData("testEmail");
+        String testPassword = JsonDataReader.getTestData("testPassword");
         loginPage.login(testEmail, testPassword);
+
         Assert.assertTrue(loginPage.isLoggedIn(),
                 "Login must succeed before logout test");
+
         loginPage.clickLogout();
         Assert.assertTrue(driver.getCurrentUrl().contains("login"),
                 "User should be redirected to login page after logout");

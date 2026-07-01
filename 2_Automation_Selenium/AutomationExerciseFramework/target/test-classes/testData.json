@@ -1,0 +1,16 @@
+{
+  "searchProduct": "Blue Top",
+  "expectedQuantity": "1",
+  "contactName": "Fady Riad",
+  "contactEmail": "fady.riad@outlook.com",
+  "contactSubject": "Bulk Order Inquiry",
+  "contactMessage": "Hello, I would like to inquire about corporate pricing and delivery timelines. Thanks.",
+  "successContactMessage": "Success! Your details have been submitted successfully.",
+  "testEmail": "judyzaghloul21@gmail.com",
+  "testName": "Judy",
+  "testPassword": "GKryP@LbbWV6eFP",
+  "wrongEmail": "wrongemail@example.com",
+  "wrongPassword": "WrongPassword",
+  "subscriptionEmail": "fady.riad@outlook.com",
+  "expectedSubscribeMsg": "You have been successfully subscribed!"
+}

@@ -1,0 +1,8 @@
+2026-07-01 03:23:19 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\Fady\AppData\Local\JetBrains\IntelliJIdea2026.1\temp-testng-customsuite.xml
+
+2026-07-01 03:23:19 [main] INFO  base.BaseTest - Starting Test Execution Configuration...
+2026-07-01 03:23:19 [main] INFO  base.BaseTest - Configuration properties loaded successfully.
+2026-07-01 03:23:19 [main] INFO  base.BaseTest - Initializing browser: chrome
+2026-07-01 03:23:20 [main] INFO  base.BaseTest - Navigating to application URL: https://automationexercise.com
+2026-07-01 03:23:26 [main] INFO  base.BaseTest - Terminating browser session and closing driver.
