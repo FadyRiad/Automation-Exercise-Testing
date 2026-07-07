@@ -10,7 +10,7 @@ This repository houses the end-to-end multi-tier testing framework designed for 
 
 | Name | Role | DEPI ID |
 | :--- | :--- | :--- |
-| **Fady Riad Shokrallah** | **Team Leader & QA Automation Architect** <br> *(Environment Setup, Architecture Design & Task Allocation)* | 21136534 |
+| **Fady Riad Shokrallah** | **Team Leader & Automation Architect** <br> *(Environment Setup, Architecture Design & Task Allocation)* | 21136534 |
 | **Habiba Mohamed Abdullah** | work Testing in all phases | 21077701 |
 | **Ahmed Samy Mohamed** | work Testing in all phases | 21118179 |
 | **Nouran Hossam Eldin Said** | work Testing in all phases | 21079183 |
