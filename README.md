@@ -10,13 +10,12 @@ This repository houses the end-to-end multi-tier testing framework designed for 
 
 | Name | Role | DEPI ID |
 | :--- | :--- | :--- |
-| **Fady Riad Shokrallah** | Team Leader & QA Automation Architect | 21136534 |
-| **Habiba Mohamed Abdullah** | Performance Testing Specialist (JMeter) | 21077701 |
-| **Ahmed Samy Mohamed** | Lead Manual QA & Defect Manager | 21118179 |
-| **Mohamed Ahmed Taha** | Database Validation Specialist (MySQL) | 21073139 |
-| **Nouran Hossam Eldin Said** | API Testing Specialist (Postman/Newman) | 21079183 |
-| **Judy Abdelhalim Fathallah** | Lead UI Automation Specialist (Selenium) | 21120080 |
-
+| **Fady Riad Shokrallah** | **Team Leader & QA Automation Architect** <br> *(Environment Setup, Architecture Design & Task Allocation)* | 21136534 |
+| **Habiba Mohamed Abdullah** | work Testing in all phases | 21077701 |
+| **Ahmed Samy Mohamed** | work Testing in all phases | 21118179 |
+| **Mohamed Ahmed Taha** | work Testing in all phases | 21073139 |
+| **Nouran Hossam Eldin Said** | work Testing in all phases | 21079183 |
+| **Judy Abdelhalim Fathallah** | work Testing in all phases | 21120080 |
 ---
 
 ## 🛠️ Technology Stack & Tools
