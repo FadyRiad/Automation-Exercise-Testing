@@ -33,27 +33,38 @@ This repository houses the end-to-end multi-tier testing framework designed for 
 
 ## 📁 Repository Directory Structure
 
-```text
-├── .github/workflows/         # CI GitHub Actions configuration
 ├── src/
-│   ├── main/java/
-│   │   └── com/depi/framework/
-│   │       ├── drivers/       # DriverManager (WebDriver configurations)
-│   │       ├── pages/         # Page Objects (BasePage and Locators)
-│   │       └── utils/         # DB Connection Helper, Custom Waits
-│   └── src/test/
+│   └── test/
 │       ├── java/
-│       │   └── com/depi/tests/
-│       │       ├── runners/   # Cucumber TestNG Runner
-│       │       └── stepdefs/  # Cucumber step definitions
+│       │   ├── base/
+│       │   │   └── BaseTest.java
+│       │   ├── pages/
+│       │   │   ├── CartPage.java
+│       │   │   ├── CheckoutPage.java
+│       │   │   ├── ContactUsPage.java
+│       │   │   ├── LoginPage.java
+│       │   │   ├── PaymentPage.java
+│       │   │   ├── ProductsPage.java
+│       │   │   └── SubscriptionPage.java
+│       │   ├── tests/
+│       │   │   ├── CartTest.java
+│       │   │   ├── CheckoutTest.java
+│       │   │   ├── ContactUsTest.java
+│       │   │   ├── LoginTest.java
+│       │   │   ├── ProductsTest.java
+│       │   │   └── SubscriptionTest.java
+│       │   └── utils/
+│       │       ├── ExtentReportManager.java
+│       │       ├── JsonDataReader.java
+│       │       └── TestListener.java
 │       └── resources/
-│           ├── features/      # Gherkin Scenario Feature Files
-│           └── testdata/      # Data-driven Excel/CSV files
-├── postman/
-│   ├── collections/           # Postman Collection JSON exports
-│   └── environments/          # Postman Environment configs
-├── jmeter/
-│   └── load_tests.jmx         # JMeter performance scripts
-├── pom.xml                    # Maven dependency configuration
-├── testng.xml                 # TestNG Suite Execution runner
-└── README.md                  # Project Documentation
+│           ├── config.properties
+│           ├── log4j2.xml
+│           └── testData.json
+├── target/
+│   └── ExtentReports/
+│       └── AutomationReport.html
+├── 3_API_Testing/
+├── 4_Database_Testing_Sakila/
+├── pom.xml
+└── testng.xml
